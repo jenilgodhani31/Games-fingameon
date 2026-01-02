@@ -28,8 +28,6 @@ export default function HomePage({ data }) {
       {/* 🔥 Load Home UI */}
       <Home data={data} />
 
-
-
     </>
   );
 }

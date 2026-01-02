@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    formats: ['image/avif', 'image/webp'], 
+    formats: ['image/avif', 'image/webp'],
+    unoptimized: true, // 🔥 ADD THIS LINE
   },
 
   swcMinify: true,
@@ -22,7 +23,6 @@ const nextConfig = {
     ];
   },
 
-  // 🟢 Long-term caching enabled (fixes "Use efficient cache lifetimes")
   async headers() {
     return [
       {

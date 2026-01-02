@@ -19,9 +19,8 @@ export default function Home({ data }) {
             return (
               <div
                 key={index}
-                className={`MainHVR gameCard relative ${
-                  index === 4 ? "big-right" : index === 12 ? "big-left" : ""
-                }`}
+                className={`MainHVR gameCard relative ${index === 4 ? "big-right" : index === 12 ? "big-left" : ""
+                  }`}
                 onClick={() => goToGame(item.name)}
               >
 
@@ -30,7 +29,7 @@ export default function Home({ data }) {
                   alt={item.name}
                   fill
                   className="object-cover"
-
+                  unoptimized
                   /** ---------------------------------------
                    ⚡ LCP Optimization Rule:
                    • Top First Image → eager load + priority=true + fetchpriority=high
@@ -39,7 +38,7 @@ export default function Home({ data }) {
 
                   priority={isLCP}
                   fetchPriority={isLCP ? "high" : "auto"}
-                  loading={isLCP ? "eager" : "lazy"}  
+                  loading={isLCP ? "eager" : "lazy"}
 
                   sizes="(max-width:640px) 50vw,(max-width:1024px) 33vw,220px"
                 />
