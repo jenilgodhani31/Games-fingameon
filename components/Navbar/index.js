@@ -27,6 +27,7 @@ export default function Navbar() {
           <Link href="/privacy-policy" className="">Privacy</Link>
           <Link href="/terms" className="">Terms</Link>
           <Link href="/games" className="">Games</Link>
+          <Link href="/disclaimer" className="">Disclaimer</Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -55,6 +56,7 @@ export default function Navbar() {
           <Link href="/privacy-policy" className="block text-white ">Privacy</Link>
           <Link href="/terms" className="block text-white ">Terms</Link>
           <Link href="/games" className="block text-white ">Games</Link>
+           <Link href="/disclaimer" className="">Disclaimer</Link>
         </div>
       )}
     </nav>

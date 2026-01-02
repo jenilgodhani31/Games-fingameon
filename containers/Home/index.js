@@ -52,11 +52,12 @@ export default function Home({ data }) {
         </div>
       </main>
 
-      <footer className="min-h-[120px] w-full bg-blue-400 text-white text-center py-4 border-t border-white">
+      <footer className=" w-full bg-blue-400 text-white text-center py-4 border-t-2 border-white">
         <div className="flex justify-center gap-5 text-lg mb-2">
           <a href="/about">About</a>
           <a href="/privacy-policy">Privacy</a>
           <a href="/terms">Terms</a>
+          <a href="/disclaimer">Disclaimer</a>
         </div>
         <p>© {new Date().getFullYear()} FinGameon. All rights reserved.</p>
       </footer>

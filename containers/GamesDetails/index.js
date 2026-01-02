@@ -206,7 +206,9 @@ function GamesDetails() {
                             </button>
                         </div>
 
-
+                        <div>
+                            <span className='font-bold'>Disclaimer:</span> Google Play and App Store are offical sources of the game, which contain no virus or malware.
+                        </div>
                         {/* Screenshots */}
                         <div className="mt-8 relative ">
                             <h1 className="text-[25px] font-bold mb-4">Screenshots</h1>
@@ -366,6 +368,7 @@ function GamesDetails() {
                         <a href="/about" className="">About</a>
                         <a href="/privacy-policy" className="">Privacy</a>
                         <a href="/terms" className="">Terms</a>
+                        <a href="/disclaimer">Disclaimer</a>
                     </div>
                     <div className="text-sm">
                         © {new Date().getFullYear()} FinGameon. All rights reserved.
@@ -383,9 +386,9 @@ function GamesDetails() {
             >
                 <div className="text-center px-4">
                     <h2 className="text-[20px] font-bold mb-3">
-                       {storeType === "appstore"
-                ? "Coming soon to the App Store"
-                : "Coming soon to the  Play Store"}
+                        {storeType === "appstore"
+                            ? "Coming soon to the App Store"
+                            : "Coming soon to the  Play Store"}
                     </h2>
 
                     <p className="text-gray-600 mb-6">

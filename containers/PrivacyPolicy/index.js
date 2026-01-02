@@ -116,6 +116,7 @@ function PrivacyPolicyPage() {
                         <Link href="/about" className="hover:text-white">About</Link>
                         <Link href="/privacy-policy" className="hover:text-white">Privacy</Link>
                         <Link href="/terms" className="hover:text-white">Terms</Link>
+                        <Link href="/disclaimer" className="hover:text-white">Disclaimer</Link> 
                     </div>
                     <div className="text-sm mt-2">
                         © {new Date().getFullYear()} FinGameon. All rights reserved.
