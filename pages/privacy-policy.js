@@ -2,15 +2,15 @@
 
 import PrivacyPolicyPage from '@/containers/PrivacyPolicy';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function PrivacyPolicy() {
     return (
         <>
             <Head>
                 <title>Privacy Policy & Terms of Use | FinGameon</title>
-                
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575195873243785"
-                    crossorigin="anonymous"></script>
+
+
                 <meta
                     name="description"
                     content="Privacy Policy and Terms of Use for FinGameon.com. Learn how we handle user data, privacy, and website usage."
@@ -40,6 +40,11 @@ export default function PrivacyPolicy() {
                 />
                 <meta name="twitter:image" content="/og-image.png" />
             </Head>
+            <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575195873243785"
+                strategy="lazyOnload"
+                crossOrigin="anonymous"
+            />
 
             <PrivacyPolicyPage />
         </>

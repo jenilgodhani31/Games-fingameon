@@ -2,15 +2,15 @@
 
 import AboutPage from '@/containers/About';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export default function About() {
     return (
         <>
             <Head>
                 <title>About FinGameon | Free Online Games – Play Now</title>
-                
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575195873243785"
-                    crossorigin="anonymous"></script>
+
+
                 <meta
                     name="description"
                     content="FinGameon features the latest and best free online games. Play instantly without downloads, login, popups or distractions. Enjoy fun games alone or with friends on desktop and mobile."
@@ -40,6 +40,12 @@ export default function About() {
                 />
                 <meta name="twitter:image" content="/og-image.png" />
             </Head>
+            <Script
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575195873243785"
+                strategy="lazyOnload"
+                crossOrigin="anonymous"
+            />
+
             <AboutPage />
 
         </>

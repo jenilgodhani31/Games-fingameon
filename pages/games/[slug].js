@@ -2,6 +2,7 @@ import GamesDetails from "@/containers/GamesDetails";
 import Head from "next/head";
 import { Fragment } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 export default function GamesDetailsPage() {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function GamesDetailsPage() {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content={`https://www.fingameon.com/games/${slug}`}
+          content={`https://games.fingameon.com/games/${slug}`}
         />
         <meta property="og:image" content="/og-image.png" />
 
@@ -49,6 +50,11 @@ export default function GamesDetailsPage() {
         />
         <meta name="twitter:image" content="/og-image.png" />
       </Head>
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4575195873243785"
+        strategy="lazyOnload"
+        crossOrigin="anonymous"
+      />
 
       <GamesDetails />
     </Fragment>
