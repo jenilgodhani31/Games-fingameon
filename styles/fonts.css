@@ -1,0 +1,4 @@
+/* Font Display Swap = no layout delay */
+* {
+  font-display: swap;
+}
