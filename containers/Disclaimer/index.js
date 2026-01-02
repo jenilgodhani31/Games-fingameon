@@ -16,23 +16,23 @@ export default function Disclaimer({ data }) {
                     <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">Disclaimer</h1>
 
                     <div className="bg-white/10 rounded-xl p-6">
-                        The information and games on <strong className="text-white">Fingameon.com</strong>
-                        are provided for entertainment only. No guarantee on accuracy or uptime.
+                        The information and games provided on <strong className="text-white">Fingameon.com</strong>
+                        are for entertainment purposes only. While we strive to ensure that all content is accurate, up-to-date, and functional, fingameon.com makes no warranties or guarantees of any kind regarding the availability, performance, or accuracy of our games and related content.
                     </div>
 
                     <div className="bg-white/10 rounded-xl p-6">
                         <h2 className="text-xl font-semibold mb-2">Use at Your Own Risk</h2>
-                        We are not responsible for any loss while using our website/service.
+                        By using our website, you acknowledge that you do so at your own risk. fingameon.com will not be held responsible for any loss, damage, or inconvenience resulting from the use of our site or inability to access
                     </div>
 
                     <div className="bg-white/10 rounded-xl p-6">
                         <h2 className="text-xl font-semibold mb-2">External Links</h2>
-                        Links to third-party websites may appear — we do not control external content.
+                        Some games or pages on fingameon.com may contain links to third-party websites. We have no control over the content, policies, or practices of these external sites, and we are not responsible for them. Visiting any external link is solely at your discretion.
                     </div>
 
                     <div className="bg-white/10 rounded-xl p-6">
                         <h2 className="text-xl font-semibold mb-2">Intellectual Property</h2>
-                        All game copyrights belong to original owners. We claim no ownership.
+                        All game copyrights and trademarks belong to their respective owners. fingameon.com does not claim ownership over any third-party game content and hosts such games in accordance with fair use, licensing agreements, or public availability.
                     </div>
 
                     <div className="bg-white/10 rounded-xl p-6 mb-4">
