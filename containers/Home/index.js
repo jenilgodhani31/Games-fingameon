@@ -31,9 +31,12 @@ export default function Home({ data }) {
                   fill
                   unoptimized
 
-                  /** 🔥 LCP CORRECT SETUP */
+                  /* 🔥 LCP setup */
                   priority={isLCP}
                   fetchPriority={isLCP ? "high" : undefined}
+
+                  /* ✅ Lazy loading for NON-LCP images */
+                  loading={isLCP ? "eager" : "lazy"}
 
                   sizes="(max-width:640px) 50vw,(max-width:1024px) 33vw,220px"
                 />
