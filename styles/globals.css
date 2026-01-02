@@ -1,8 +1,5 @@
 @import "tailwindcss";
 
-/* =======================
-   GLOBAL
-======================= */
 body {
   background: var(--background);
   color: black;
@@ -19,23 +16,31 @@ body {
 }
 
 /* =======================
-   GAME CARD (CLS SAFE)
+   GAME CARD
 ======================= */
 .gameCard {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
   cursor: pointer;
-
-  /* 🔥 CLS FIX */
-  aspect-ratio: 16 / 9;
-
-  /* Animation */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 100px;
+  transition: all 0.3s ease;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 10px 0px;
+}
 
-  /* Skeleton */
-  background: #1e40af;
+.imgWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* 🔥 MOST IMPORTANT */
+  overflow: hidden;
+}
+
+
+/* Hover animation */
+.MainHVR:hover {
+  transform: scale(1.01869) translateY(-5px);
+  border: 2.5px solid #ffffff;
+  user-select: none;
 }
 
 /* =======================
@@ -48,66 +53,92 @@ body {
 }
 
 /* =======================
-   HOVER (NO REFLOW)
+   DARK OVERLAY (ON HOVER)
 ======================= */
-.MainHVR:hover {
-  transform: scale(1.018) translateY(-5px);
-  border: 2px solid #ffffff;
-  user-select: none;
+
+.gameCard:hover::after {
+  opacity: 1;
 }
 
 /* =======================
-   GAME NAME (NO CLS)
+   GAME NAME TEXT
 ======================= */
 .DataName {
   position: absolute;
-  left: 0;
-  bottom: 8px;
+  bottom: -90%;
   width: 100%;
   text-align: center;
-
   z-index: 2;
   color: white;
   font-weight: 500;
   letter-spacing: 0.5px;
-
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .MainHVR:hover .DataName {
-  opacity: 1;
-  transform: translateY(0);
+  bottom: 6px;
 }
 
 /* =======================
-   BIG CARDS (GRID ONLY)
-   ❌ NO HEIGHT CALC
+   BIG CARDS
 ======================= */
 .big-left {
   grid-column: 2 / span 3;
   grid-row: 2 / span 3;
+  height: calc(105px * 3 + 10px * 2);
 }
 
 .big-right {
   grid-column: 5 / span 3;
   grid-row: 1 / span 3;
+  height: calc(105px * 3 + 10px * 2);
+}
+
+/* =======================
+   SCROLLBAR HIDE
+======================= */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* =======================
    RESPONSIVE
 ======================= */
+
+/* ---------- TABLET ---------- */
 @media (max-width: 1024px) {
   .gamesGrid {
     grid-template-columns: repeat(7, 1fr);
   }
+  .gameCard {
+    height: auto;
+    border-radius: 12px;
+  }
+  .big-left {
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 3;
+  }
+
+  .big-right {
+    grid-column: 5 / span 3;
+    grid-row: 1 / span 3;
+  }
 }
 
+/* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .gamesGrid {
     grid-template-columns: repeat(5, 1fr);
     gap: 12px;
+  }
+
+  .gameCard {
+    height: auto;
+    border-radius: 12px;
   }
 
   .big-left {
@@ -121,20 +152,69 @@ body {
   }
 }
 
+/* ---------- VERY SMALL DEVICES ---------- */
 @media (max-width: 570px) {
   .gamesGrid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .gameCard {
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .big-left {
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  .big-right {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
   }
 }
 
 @media (max-width: 450px) {
   .gamesGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .gameCard {
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .big-left {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  .big-right {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
   }
 }
 
 @media (max-width: 300px) {
   .gamesGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gameCard {
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .big-left {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 2;
+  }
+
+  .big-right {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
   }
 }
